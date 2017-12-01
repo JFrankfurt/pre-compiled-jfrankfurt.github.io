@@ -68,16 +68,16 @@ export default class Home extends Component {
             <p>Software Engineer{`\u2013`}Brooklyn, NY.</p>
             <br/>
             <b>Topics of interest:</b>
-            <pre className={css(styles.monoSpaced)}> structured credit (nonagy cmos, servicing, and related)</pre>
+            <pre className={css(styles.monoSpaced)}> structured credit (nonagy cmos and servicing)</pre>
             <pre className={css(styles.monoSpaced)}> cryptography (range proofs, Cuckoo Cycle)</pre>
             <pre className={css(styles.monoSpaced)}> distributed systems</pre>
             <pre className={css(styles.monoSpaced)}> reinforcement learning w/ implicit feedback</pre>
             <pre className={css(styles.monoSpaced)}> history of monetary systems</pre>
             <br/>
             <b>Technical Experience</b>
-            <pre className={css(styles.monoSpaced)}> full stack javascript (node/express, react, angular)</pre>
+            <pre className={css(styles.monoSpaced)}> full stack JS (node/express, react/angular)</pre>
             <pre className={css(styles.monoSpaced)}> sql, nosql, and in memory data stores</pre>
-            <pre className={css(styles.monoSpaced)}> microservice architectures (analytics, messaging, service discovery)</pre>
+            <pre className={css(styles.monoSpaced)}> microservice arch. (messaging, service discovery)</pre>
             <br/>
             {
               !this.state.loading
