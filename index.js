@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'var(--red)'
   },
   navBarContent: {
-    width: '70%',
+    width: '60%',
     minWidth: '300px',
     height: '100%',
     display: 'flex',

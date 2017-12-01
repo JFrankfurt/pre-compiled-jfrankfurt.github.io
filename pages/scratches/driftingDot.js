@@ -37,7 +37,9 @@ export default class DriftingDot extends Particle {
       this.time = 0; // always re-enter with an opacity of 0.
     }
     //draw fill and dot.
-    this.form.stroke(false).fill(`rgba(147, 161, 161, ${this.lifespanFade(this.time / this.lifespan)})`);
+    this.form
+      .stroke(false)
+      .fill(`rgba(147, 161, 161, ${this.lifespanFade(this.time / this.lifespan)})`);
     this.form.point(this, this.radius, true);
   };
 

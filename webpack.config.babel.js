@@ -8,6 +8,10 @@ const path = require('path');
 module.exports = env => ({
   target: 'web',
   entry: ['babel-polyfill', './index.js'],
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -44,7 +48,7 @@ module.exports = env => ({
         windows: true
       }
     }),
-    new UglifyJsPlugin(),
+    //new UglifyJsPlugin(),
     new HtmlWebpackPlugin({template: './index.html'})
   ]
 });

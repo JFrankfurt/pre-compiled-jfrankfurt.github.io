@@ -25,12 +25,12 @@ export default class FloatingDots extends Component {
         animate: time => {
           // add dots if too few.
           const count = Object.keys(this.state.space.items).length;
-          const maxCount = Math.round((this.state.space.size.x * this.state.space.size.y) / 22500);
-          if (count < maxCount && time - this.state.lastAdded > Math.random() * 1500 + 500) {
+          const maxCount = Math.round((this.state.space.size.x * this.state.space.size.y) / 4000);
+          if (count < maxCount && time - this.state.lastAdded > Math.random() * 50 + 100) {
             const dot = new DriftingDot(this.randomPoint(this.state.space.size), this.state.form, this.state.space);
             dot.setRadius(Math.random() > 0.5 ? 3 : 2);
             dot.mass = 1;
-            dot.impulse(new Vector((Math.random() - Math.random()) / 15, (Math.random() - Math.random()) / 15));
+            dot.impulse(new Vector((Math.random() - Math.random()) / 5, (Math.random() - Math.random()) / 5));
             this.state.space.add(dot);
             this.setState({lastAdded: Math.round(time)});
           }

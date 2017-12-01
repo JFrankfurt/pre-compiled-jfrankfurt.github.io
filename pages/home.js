@@ -7,17 +7,25 @@ const styles = StyleSheet.create({
     minWidth: '300px',
     minHeight: '600px',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   },
   profile: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
-    gridGap: '20px'
+    display: 'flex',
+    flexDirection: 'row',
+    '@media (max-width: 600px)': {
+      flexDirection: 'column'
+    }
   },
   imageContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginRight: '16px',
+    '@media (max-width: 600px)': {
+      justifyContent: 'center'
+    }
   },
   image: {
     borderRadius: '50%',
