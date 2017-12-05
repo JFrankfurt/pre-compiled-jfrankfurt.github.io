@@ -77,11 +77,9 @@ class Wrapper extends Component {
       <div className={css(styles.root)}>
         <div className={css(styles.navBar)}>
           <div className={css(styles.navBarContent)}>
-            <Link className={css(styles.homeButton)}
-                  to='/'>JF</Link>
+            <Link className={css(styles.homeButton)} to='/'>JF</Link>
             <div className={css(styles.linkSection)}>
-              <Link className={css(styles.link)}
-                    to='/scratchpad/'>scratchpad</Link>
+              <Link className={css(styles.link)} to='/scratchpad/'>scratchpad</Link>
             </div>
           </div>
         </div>

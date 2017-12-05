@@ -28,6 +28,7 @@ export const Scratchpad = () => (
     <div className={css(styles.section)}>
       <h3 className={css(styles.title)}>
         <a href="https://github.com/JFrankfurt/brownian-motion-animation"
+           target="_blank"
            className={css(styles.link)}>
           Brownian motion (+momentum/-collisions)
         </a>

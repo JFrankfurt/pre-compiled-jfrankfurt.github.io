@@ -48,7 +48,7 @@ module.exports = env => ({
         windows: true
       }
     }),
-    //new UglifyJsPlugin(),
+    // new UglifyJsPlugin(),
     new HtmlWebpackPlugin({template: './index.html'})
   ]
 });
