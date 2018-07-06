@@ -5,6 +5,7 @@ import DriftingDot from "./driftingDot";
 
 const styles = new StyleSheet.create({
   plotArea: {
+    height: '100%',
     width: '100%'
   }
 });

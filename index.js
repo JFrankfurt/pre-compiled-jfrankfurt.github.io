@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {css, StyleSheet} from 'aphrodite';
-import ReactDOM from 'react-dom';
-import {HashRouter, Link, Route, Switch} from "react-router-dom";
+import React from 'react'
+import {css, StyleSheet} from 'aphrodite'
+import ReactDOM from 'react-dom'
+import {HashRouter, Link, Route, Switch} from "react-router-dom"
 
-import {Scratchpad} from "./pages/scratchpad";
-import Home from "./pages/home";
+import {Scratchpad} from "./pages/scratchpad"
+import Home from "./pages/home"
 
 const styles = StyleSheet.create({
   root: {
@@ -65,29 +65,21 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(255, 255, 255, 0.2)'
     }
   }
-});
+})
 
-class Wrapper extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className={css(styles.root)}>
-        <div className={css(styles.navBar)}>
-          <div className={css(styles.navBarContent)}>
-            <Link className={css(styles.homeButton)} to='/'>JF</Link>
-            <div className={css(styles.linkSection)}>
-              <Link className={css(styles.link)} to='/scratchpad/'>scratchpad</Link>
-            </div>
-          </div>
+const Wrapper = ({ children }) =>
+  <div className={css(styles.root)}>
+    <div className={css(styles.navBar)}>
+      <div className={css(styles.navBarContent)}>
+        <Link className={css(styles.homeButton)} to='/'>JF</Link>
+        <div className={css(styles.linkSection)}>
+          <Link className={css(styles.link)} to='/scratchpad/'>scratchpad</Link>
         </div>
-        {this.props.children}
       </div>
-    )
-  }
-}
+    </div>
+    {children}
+  </div>
+
 
 ReactDOM.render(
   <HashRouter>
@@ -99,4 +91,4 @@ ReactDOM.render(
     </Wrapper>
   </HashRouter>,
   document.getElementById('root')
-);
+)

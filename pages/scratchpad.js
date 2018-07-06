@@ -1,15 +1,22 @@
-import React from 'react';
-import {css, StyleSheet} from 'aphrodite';
-import FloatingDots from "./scratches/floatingDots";
+import React from 'react'
+import {css, StyleSheet} from 'aphrodite'
+import FloatingDots from "./scratches/floatingDots"
 
 const styles = StyleSheet.create({
   root: {
-    width: '100%'
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+    gridTemplateRows: '1fr 2fr 2fr',
+    gridGap: 12,
+    height: 'calc(100vh - 80px)',
+    width: '100%',
   },
   section: {
-    position: 'relative',
+    justifySelf: 'right',
     width: '100%',
-    marginBottom: '10px'
+    position: 'relative',
+    gridColumn:'1 / 4',
+    gridRow:'1 / 3',
   },
   title: {
     position: 'absolute',
@@ -21,19 +28,21 @@ const styles = StyleSheet.create({
   link: {
     color: 'var(--base00)'
   }
-});
+})
 
 export const Scratchpad = () => (
   <div className={css(styles.root)}>
     <div className={css(styles.section)}>
       <h3 className={css(styles.title)}>
+        Brownian motion (+momentum/-collisions 😊)
+        &nbsp;
         <a href="https://github.com/JFrankfurt/brownian-motion-animation"
            target="_blank"
            className={css(styles.link)}>
-          Brownian motion (+momentum/-collisions)
+          github
         </a>
       </h3>
       <FloatingDots/>
     </div>
   </div>
-);
+)
