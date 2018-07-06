@@ -78,7 +78,6 @@ export default class Home extends Component {
             <b>Topics of interest:</b>
             <pre className={css(styles.monoSpaced)}> structured credit (nonagy cmos and servicing)</pre>
             <pre className={css(styles.monoSpaced)}> cryptography (Mimblewimble! ❤️)</pre>
-            <pre className={css(styles.monoSpaced)}> reinforcement learning w/ implicit feedback</pre>
             <pre className={css(styles.monoSpaced)}> history of monetary systems</pre>
             <br/>
             <b>Technical Experience</b>
